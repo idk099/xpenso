@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "385376012479",
+    "project_id": "xpenso-tracker",
+    "storage_bucket": "xpenso-tracker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385376012479:android:ea32659d8bc4b58a249e0a",
+        "android_client_info": {
+          "package_name": "com.example.xpenso"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDef0-pnacMzLb49DF3EMOklLp-U0FG_Rw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

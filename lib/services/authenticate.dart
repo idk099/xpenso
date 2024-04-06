@@ -94,7 +94,7 @@ class Authenticate {
       if (e.code == 'user-not-found') {
         Get.defaultDialog(
           titleStyle: const TextStyle(fontWeight: FontWeight.bold),
-          title: "EMAIL ID NOT REGISTERED",
+          title: "Email Id not registered",
           barrierDismissible: false,
           content: const Icon(
             Icons.close,

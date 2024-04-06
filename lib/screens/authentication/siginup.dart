@@ -26,35 +26,36 @@ class _SignupState extends State<Signup> {
           height: double.infinity,
           width: double.infinity,
           decoration: const BoxDecoration(
-              gradient: LinearGradient(colors: [Colors.green, Colors.amber])),
+              gradient: LinearGradient(
+                  colors: [Color(0xff64e8de), Color(0xff8464eb)])),
           child: Column(
             children: [
               Image.asset('assets/images/Xpenso.png', height: 220),
               Expanded(
                 child: Container(
-                  decoration: const BoxDecoration(
-                      color: Colors.white,
+                  decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.3),
                       borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(90),
-                      )),
+                          topLeft: Radius.circular(50),
+                          topRight: Radius.circular(50))),
                   child: Form(
                       key: _formkey,
                       child: Column(
                         children: [
-                          const SizedBox(height: 50),
+                          const SizedBox(height: 30),
                           const Text(
                             "CREATE ACCOUNT",
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.bold),
                           ),
-                          const SizedBox(height: 30),
+                          const SizedBox(height: 20),
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            padding: const EdgeInsets.symmetric(horizontal: 48),
                             child: TextFormField(
                                 controller: _emailcontroller,
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
-                                    return 'Please a enter email';
+                                    return 'Please enter an email';
                                   }
                                   final emailRegx = RegExp(
                                       r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
@@ -71,16 +72,16 @@ class _SignupState extends State<Signup> {
                                             BorderRadius.circular(20)))),
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            padding: const EdgeInsets.symmetric(horizontal: 48),
                             child: TextFormField(
                                 controller: _passwordcontroller,
                                 validator: (value) {
                                   val = value;
                                   if (value == null || value.isEmpty) {
-                                    return 'Please enter password';
+                                    return 'Please enter the password';
                                   }
                                   if (value.length < 4) {
                                     return 'Password must contain more than 4 characters';
@@ -104,10 +105,10 @@ class _SignupState extends State<Signup> {
                                             BorderRadius.circular(20)))),
                           ),
                           const SizedBox(
-                            height: 20,
+                            height: 10,
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            padding: const EdgeInsets.symmetric(horizontal: 48),
                             child: TextFormField(
                                 validator: (value) {
                                   if (val!.isNotEmpty && value!.isEmpty) {
@@ -134,7 +135,7 @@ class _SignupState extends State<Signup> {
                                         borderRadius:
                                             BorderRadius.circular(20)))),
                           ),
-                          const SizedBox(height: 30),
+                          const SizedBox(height: 13),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.red,
@@ -149,7 +150,7 @@ class _SignupState extends State<Signup> {
                                 }
                               },
                               child: const Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 80),
+                                padding: EdgeInsets.symmetric(horizontal: 30),
                                 child: Text(
                                   "SUBMIT",
                                   style: TextStyle(color: Colors.white),

@@ -28,15 +28,16 @@ class _ForgotState extends State<Forgot> {
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset('assets/images/Xpenso.png',scale: 2.9,),
-                  
-                  
+                  Image.asset(
+                    'assets/images/Xpenso.png',
+                    scale: 2.9,
+                  ),
                   Expanded(
                     child: Container(
-                      margin: const EdgeInsets.fromLTRB(50, 20, 50, 200),
+                      margin: const EdgeInsets.fromLTRB(10, 20, 10, 190),
                       decoration: BoxDecoration(
                           color: Colors.white.withOpacity(0.3),
-                          borderRadius: BorderRadius.circular(30)),
+                          borderRadius: BorderRadius.circular(35)),
                       child: Form(
                         key: _formkey,
                         child: Column(
@@ -45,11 +46,12 @@ class _ForgotState extends State<Forgot> {
                               height: 30,
                             ),
                             const Text(
-                    "PASSWORD RESET",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  ),
+                              "RESET PASSWORD",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold),
+                            ),
                             const SizedBox(
-                              height: 50,
+                              height: 40,
                             ),
                             Padding(
                               padding:
@@ -58,7 +60,7 @@ class _ForgotState extends State<Forgot> {
                                   controller: _emailcontroller,
                                   validator: (value) {
                                     if (value == null || value.isEmpty) {
-                                      return 'Please a enter email';
+                                      return 'Please enter an email';
                                     }
                                     final emailRegx = RegExp(
                                         r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
@@ -96,7 +98,6 @@ class _ForgotState extends State<Forgot> {
                                     style: TextStyle(color: Colors.white),
                                   ),
                                 )),
-                           
                           ],
                         ),
                       ),
